@@ -21,7 +21,6 @@ RUN apt-get -y install libmysqlclient20 openssl
 
 COPY --from=build-step /mangos /mangos
 WORKDIR /mangos/bin
-RUN cp ../etc/mangosd.conf.dist ../etc/mangosd.conf
 RUN chmod +x mangosd
 
 EXPOSE 8085
